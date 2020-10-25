@@ -1,6 +1,6 @@
 # 0cost.org
 
-[![Build Status](https://travis-ci.com/kevr/0cost.org.svg?branch=master)](https://travis-ci.com/kevr/0cost.org)
+[![Build Status](https://travis-ci.org/0cost/0cost.org.svg?branch=master)](https://travis-ci.org/0cost/0cost.org)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
