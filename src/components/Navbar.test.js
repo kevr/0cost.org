@@ -22,4 +22,8 @@ test('renders navbar', () => {
   const { getByText } = render(<Navbar title="Test Nav" />);
   const linkElement = getByText(/test nav/i);
   expect(linkElement).toBeInTheDocument();
+
+  expect(getByText(/projects/i)).toBeInTheDocument();
+  expect(getByText(/references/i)).toBeInTheDocument();
+  expect(getByText(/about/i)).toBeInTheDocument();
 });
