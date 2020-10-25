@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Button, Typography } from '@material-ui/core';
 
 const Navbar = ({ title }) => (
   <AppBar position="static">
     <Toolbar className="d-flex">
       <div className="flex-fill text-left">
-        <a className="text-undecorated"
-          href="/"
-          alt="Homepage"
-        >
+        <Link className="text-undecorated" to="/">
           <Typography variant="h6">
             {title}
           </Typography>
-        </a>
+        </Link>
       </div>
 
       <Button color="inherit">

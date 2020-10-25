@@ -1,11 +1,16 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './Navbar';
 import sinon from 'sinon';
 
 test('does not render navbar with missing title', () => {
   const stub = sinon.spy(console, 'error');
-  const { getByText } = render(<Navbar />);
+  const { getByText } = render((
+    <Router>
+      <Navbar />
+    </Router>
+  ));
   expect(stub.called).toBe(true);
 
   const args = stub.getCall(0).args;
@@ -19,7 +24,11 @@ test('does not render navbar with missing title', () => {
 });
 
 test('renders navbar', () => {
-  const { getByText } = render(<Navbar title="Test Nav" />);
+  const { getByText } = render((
+    <Router>
+      <Navbar title="Test Nav" />
+    </Router>
+  ));
   const linkElement = getByText(/test nav/i);
   expect(linkElement).toBeInTheDocument();
 
