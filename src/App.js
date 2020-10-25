@@ -1,10 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Button } from '@material-ui/core';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
+      <Navbar title="ZeroCost" />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -16,7 +20,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <Button variant="contained" color="primary">
+            Learn React
+          </Button>
         </a>
       </header>
     </div>
