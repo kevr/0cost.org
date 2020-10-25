@@ -1,0 +1,16 @@
+language: javascript
+dist: bionic
+sudo: false
+
+git:
+  submodules: true
+
+before_install:
+  - git fetch --all
+  - nvm install 14.14.0
+  - nvm use 14.14.0
+  - npm install
+
+script:
+  - npm run build
+  - sh scripts/run_tests.sh
