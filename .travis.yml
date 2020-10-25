@@ -1,14 +1,15 @@
-language: javascript
+language: node_js
 dist: bionic
 sudo: false
+
+node_js:
+  - 14
 
 git:
   submodules: true
 
 before_install:
   - git fetch --all
-  - nvm install 14.14.0
-  - nvm use 14.14.0
   - npm install
 
 script:
