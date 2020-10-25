@@ -19,6 +19,12 @@ const Navbar = ({ title }) => (
       <Button color="inherit">
         Projects
       </Button>
+      <Button color="inherit">
+        References
+      </Button>
+      <Button color="inherit">
+        About
+      </Button>
     </Toolbar>
   </AppBar>
 );
