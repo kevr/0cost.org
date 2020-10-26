@@ -13,14 +13,19 @@ test('does not render navbar with missing title', () => {
   ));
   expect(stub.called).toBe(true);
 
-  const args = stub.getCall(0).args;
-  expect(args[0]).toBe("Warning: Failed %s type: %s%s");
-  expect(args[1]).toBe("prop");
-  expect(args[2]).toBe(
+  const [
+    firstArg,
+    secondArg,
+    thirdArg
+  ] = stub.getCall(0).args;
+
+  // Check against the error output to make sure it
+  // was related to Navbar.title.
+  expect(firstArg).toBe("Warning: Failed %s type: %s%s");
+  expect(secondArg).toBe("prop");
+  expect(thirdArg).toBe(
     "The prop `title` is marked as required " +
     "in `Navbar`, but its value is `undefined`.");
-  // We don't match against args[3], because it has \n and extra spacing.
-  // The expectation above is enough.
 });
 
 test('renders navbar', () => {
