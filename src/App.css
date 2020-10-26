@@ -74,3 +74,59 @@ body {
 .text-left {
   text-align: left;
 }
+
+.text-right {
+  text-align: right;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-white-force {
+  color: white !important;
+}
+
+#root .text-normal {
+  text-transform: none;
+}
+
+.MuiAppBar-root .navbar-brand > button > h6 {
+  display: inline-block;
+}
+
+.MuiAppBar-root .navbar-brand > button:hover {
+  background-color: transparent;
+}
+
+/* Select divs that have an id ending with '-menu'. */
+div[id$="-nav-menu"] {
+  margin-top: 25px;
+}
+
+/* Select divs that have an id ending with '-menu'. */
+div[id$="-nav-menu"] .MuiPaper-root {
+  background-color: #3f51b5;
+  border-radius: 1px;
+}
+
+/* Modify how AppBar buttons and links looks. */
+.MuiAppBar-root button,
+.MuiPaper-root button {
+  border-radius: 1px;
+}
+
+.MuiAppBar-root button.active,
+.MuiPaper-root button.active {
+  box-shadow: 0px 1px white;
+}
+
+.MuiAppBar-root .MuiButton-root,
+.MuiPaper-root .MuiButton-root,
+#root .MuiButton-root {
+  /* There's a bug with .active buttons; box-shadow at the bottom
+   * shows differently. See `ABOUT` and `ORGANIZATION`. This could
+   * possibly be the browser's fault, but even if it is, we'd like
+   * to standardize the look of our buttons in some way. */
+  font-size: 0.875rem;
+}
