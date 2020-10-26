@@ -2,8 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders App landing', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  // Ensure the brand (root navigation item) is active.
+  const brandButton = getByText(/zerocost/i).closest("button");
+  expect(brandButton).toHaveClass("active");
 });
