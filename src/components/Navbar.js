@@ -18,7 +18,7 @@ const Navbar = ({ title, routes, location }) => {
 
   return (
     <AppBar position="static">
-      <Toolbar className="d-flex">
+      <Toolbar className="d-flex flex-row">
         <div className="flex-fill text-left">
           <Link className="text-undecorated navbar-brand" to="/">
             <Button color="inherit" className={className}>

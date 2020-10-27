@@ -8,10 +8,6 @@ body {
     flex-direction: column;
 }
 
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -64,7 +60,15 @@ body {
 
 .d-flex {
   display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
   flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-fill {
@@ -73,6 +77,10 @@ body {
 
 .text-left {
   text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-right {
@@ -129,4 +137,28 @@ div[id$="-nav-menu"] .MuiPaper-root {
    * possibly be the browser's fault, but even if it is, we'd like
    * to standardize the look of our buttons in some way. */
   font-size: 0.875rem;
+}
+
+/* Page-related styles. */
+
+/* An altered .App-header from create-react-app. */
+.page-content {
+  font-size: calc(10px + 2vmin);
+
+  /*
+  align-items: center;
+  justify-content: center;
+  */
+}
+
+#page-root {
+  padding: 42px;
+
+  /*
+  background-color: #333333;
+  color: #eeeeee;
+  */
+
+  font-size: calc(10px + 2vmin);
+  font-family: "Roboto", sans-serif;
 }

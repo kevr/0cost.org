@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { Container } from '@material-ui/core';
 import Navbar from './components/Navbar';
 import Page from './pages';
 import './App.css';
@@ -26,13 +27,15 @@ const App = () => {
     <div className="App">
       <Navbar title="ZeroCost" routes={routes} />
 
-      <Switch>
-        <Route exact path="/" component={Page.Home} />
-        <Route exact path="/projects" component={Page.Projects} />
-        <Route exact path="/reference" component={Page.Reference} />
-        <Route exact path="/about/org" component={Page.About.Organization} />
-        <Route path="/" component={Page.NotFound} />
-      </Switch>
+      <Container id="page-root" color="primary" className="d-flex flex-fill">
+        <Switch>
+          <Route exact path="/" component={Page.Home} />
+          <Route exact path="/projects" component={Page.Projects} />
+          <Route exact path="/reference" component={Page.Reference} />
+          <Route exact path="/about/org" component={Page.About.Organization} />
+          <Route path="/" component={Page.NotFound} />
+        </Switch>
+      </Container>
     </div>
   );
 }
