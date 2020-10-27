@@ -4,13 +4,16 @@ import {
   Card,
   CardActions,
   CardContent,
-  Typography
+  Typography,
+  Grid
 } from '@material-ui/core';
 
 const Home = () => (
-  <div id="home-page" className="page-content d-flex flex-fill">
-    <div>
-      <Card style={{ maxWidth: "400px" }}>
+  <Grid id="home-page" className="page-content d-flex flex-fill"
+    container
+  >
+    <Grid item xs={12} sm={6}>
+      <Card>
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
             Welcome
@@ -38,8 +41,8 @@ const Home = () => (
           </a>
         </CardActions>
       </Card>
-    </div>
-  </div>
+    </Grid>
+  </Grid>
 );
 
 export default Home;
