@@ -33,7 +33,11 @@ const App = () => {
         <Navbar title="ZeroCost" routes={routes} />
 
         <Switch>
-          <Route path="/" component={Page.Home} />
+          <Route exact path="/" component={Page.Home} />
+          <Route exact path="/projects" component={Page.Projects} />
+          <Route exact path="/reference" component={Page.Reference} />
+          <Route exact path="/about/org" component={Page.About.Organization} />
+          <Route path="/" component={Page.NotFound} />
         </Switch>
       </div>
     </Router>
