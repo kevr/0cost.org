@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import sinon from 'sinon';
 
 test('does not render navbar with missing title', () => {
-  const stub = sinon.spy(console, 'error');
+  const stub = sinon.stub(console, 'error');
   const { getByText } = render((
     <Router>
       <Navbar />

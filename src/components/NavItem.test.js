@@ -5,7 +5,7 @@ import NavItem from './NavItem';
 import sinon from 'sinon';
 
 test('does not render NavItem with missing title', () => {
-  const stub = sinon.spy(console, 'error');
+  const stub = sinon.stub(console, 'error');
   const { getByText } = render((
     <Router>
       <NavItem />
